@@ -84,41 +84,41 @@
  *  *****
  */
 
-// function leftTriangle(n) {
-//   for (let i = 1; i <= n; i++) {
-//     let pattern = "";
-//     for (let j = 1; j <= i; j++) {
-//       pattern += "*";
-//     }
-//     console.log(pattern);
-//   }
-// }
-// leftTriangle(5);
+function leftTriangle(n) {
+  for (let i = 1; i <= n; i++) {
+    let pattern = "";
+    for (let j = 1; j <= i; j++) {
+      pattern += "*";
+    }
+    console.log(pattern);
+  }
+}
+leftTriangle(5);
 
-// function leftTriangleInverted(n) {
-//   for (let i = n; i >= 1; i--) {
-//     let pattern = "";
-//     for (let j = 1; j <= i; j++) {
-//       pattern += "*";
-//     }
-//     console.log(pattern);
-//   }
-// }
-// leftTriangleInverted(5);
+function leftTriangleInverted(n) {
+  for (let i = n; i >= 1; i--) {
+    let pattern = "";
+    for (let j = 1; j <= i; j++) {
+      pattern += "*";
+    }
+    console.log(pattern);
+  }
+}
+leftTriangleInverted(5);
 
-// function rightTriangle(n) {
-//   for (let i = 1; i <= n; i++) {
-//     let pattern = "";
-//     for (let j = 1; j <= n - i; j++) {
-//       pattern += " ";
-//     }
-//     for (let k = 1; k <= i; k++) {
-//       pattern += "*";
-//     }
-//     console.log(pattern);
-//   }
-// }
-// rightTriangle(5);
+function rightTriangle(n) {
+  for (let i = 1; i <= n; i++) {
+    let pattern = "";
+    for (let j = 1; j <= n - i; j++) {
+      pattern += " ";
+    }
+    for (let k = 1; k <= i; k++) {
+      pattern += "*";
+    }
+    console.log(pattern);
+  }
+}
+rightTriangle(5);
 
 function rightTriangleInverted(n) {
   for (let i = 0; i <= n; i++) {
@@ -133,3 +133,77 @@ function rightTriangleInverted(n) {
   }
 }
 rightTriangleInverted(5);
+
+function Pyramid(n) {
+  for (let i = 1; i <= n; i++) {
+    let pattern = "";
+    for (let j = 1; j <= n - i; j++) {
+      pattern += " ";
+    }
+    for (let k = 1; k <= i; k++) {
+      pattern += "* ";
+    }
+    console.log(pattern);
+  }
+}
+Pyramid(5);
+
+function pyramidInverted(n) {
+  for (let i = 0; i <= n; i++) {
+    let pattern = "";
+    for (let j = 1; j <= i; j++) {
+      pattern += " ";
+    }
+    for (let k = 1; k <= n - i; k++) {
+      pattern += "* ";
+    }
+    console.log(pattern);
+  }
+}
+pyramidInverted(5);
+
+function square(n) {
+  for (let i = 1; i <= n; i++) {
+    let pattern = "";
+    for (let j = 1; j <= 5; j++) {
+      if (i == 1 || i == n) pattern += "*";
+      else {
+        if (j == 1 || j == 5) {
+          pattern += "*";
+        } else {
+          pattern += " ";
+        }
+      }
+    }
+    console.log(pattern);
+  }
+}
+square(3);
+
+function pyramidTriangle(n) {
+  for (let i = 1; i <= n; i++) {
+    let pattern = "";
+    for (let j = 1; j <= n - i; j++) {
+      pattern += " ";
+    }
+    for (let k = 1; k <= 2 * i - 1; k++) {
+      pattern += "*";
+    }
+    console.log(pattern);
+  }
+}
+pyramidTriangle(5);
+
+function pyramidTriangleInverted(n) {
+  for (let i = n; i >= 1; i--) {
+    let pattern = "";
+    for (let j = 1; j <= n - i; j++) {
+      pattern += " ";
+    }
+    for (let k = 1; k <= 2 * i - 1; k++) {
+      pattern += "*";
+    }
+    console.log(pattern);
+  }
+}
+pyramidTriangleInverted(5);
